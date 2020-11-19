@@ -1,0 +1,66 @@
+<?page title="Registrarse" contentType="text/html;charset=UTF-8"?>
+	<window sclass="container" apply="com.aplication.ctrl.RegisterUserCtrl">
+		<style>
+			<!-- Styles to main container -->
+			.container{ 
+			margin-top: 0%; margin-bottom: 0%; height: 100%;
+
+			}
+			<!-- Styles to form-login -->
+			.form-login{ display: flex; }
+			<!--Styles to card-content-->
+			.card-content{ border-radius: 20px; font-size: 15%; }
+
+			<!-- Styles buttons -->
+			.button-register { background-color: white; color: black;
+			border: 0px; border-radius: 14px; margin: 5px; z-index: 0px;
+			}
+			<!-- Styles to inputs login -->
+			.inputs-login { display: block; width: 100%; margin: 5px;
+			border: 0; border-radius: 4px; border-box; padding: 12px
+			20px; font-weight: 200px; line-height:inherit;
+		</style>
+		<div sclass="form-login">
+			<grid>
+				<columns>
+					<column />
+				</columns>
+				<rows>
+					<row sclass="card-content">
+						<image
+							src="https://pickportal.com/Content/img/php-login-and-authentication-the-definitive-guide.png"
+							style="width: 100%;" />
+						<div sclass="col">
+							<html>
+								
+								<![CDATA[ <h1> ZK Framewor Test</h1> <p>
+								¡Ingresa Tús datos! </p> ]]>
+								
+							</html>
+						<textbox sclass="inputs-login" id="documentInput2"
+								width="80%" constraint="no empty" placeholder="Nombre" />
+							<textbox sclass="inputs-login" id="nameInput2"
+								width="80%" constraint="no empty" placeholder="Nombre" />
+							<textbox sclass="inputs-login" id="lastnameInput2"
+								width="80%" constraint="no empty" placeholder="Apellido" />
+							<textbox sclass="inputs-login" id="emailInput2"
+								width="80%"
+								constraint="/.+@.+\.[a-z]+/: Please enter an e-mail address"
+								placeholder="Correo" />
+							<textbox sclass="inputs-login" id="phoneInput2"
+								width="80%" constraint="no empty" placeholder="Telefono" />
+							<textbox sclass="inputs-login"
+								id="directionInput2" width="80%" constraint="no empty"
+								placeholder="Direccion" />
+							<textbox sclass="inputs-login" id="passwordInput2" type="password"
+								width="80%" placeholder="Contraseña" constraint="no empty"
+							 />
+							<button sclass="button-register" id="sendregisterButton"> 
+								Registrarse
+							</button>
+						</div>
+					</row>
+				</rows>
+			</grid>
+		</div>
+	</window>

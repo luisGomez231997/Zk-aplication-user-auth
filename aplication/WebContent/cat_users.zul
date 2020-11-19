@@ -1,0 +1,92 @@
+<?page title="catalogo de usuarios" contentType="text/html;charset=UTF-8"?>
+<window apply="com.aplication.ctrl.CatUsuarioCtrl">
+	<hbox align="center">
+		Buscar:
+		<textbox id="keywordBox" />
+		<button id="searchButton" label="Buscar"
+			iconSclass="z-icon-search" />
+		<button id="exitButton" label="Salir"
+			iconSclass="z-icon-power-off" style="background: red;" />
+	</hbox>
+	<listbox id="userListbox" emptyMessage="No user found in the result"
+		style="margin-top:10px" mold="paging" pageSize="20">
+		<listhead>
+			<listheader label="Codigo" />
+			<listheader label="Documento" />
+			<listheader label="Nombre" />
+			<listheader label="Apellido" />
+			<listheader label="Correo" />
+			<listheader label="Direccion" />
+			<listheader label="Telefono" />
+			<listheader label="Contraseña" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.codigo}"></listcell>
+				<listcell label="${each.documento}"></listcell>
+				<listcell label="${each.nombre}"></listcell>
+				<listcell label="${each.apellido}"></listcell>
+				<listcell label="${each.correo}"></listcell>
+				<listcell label="${each.direccion}"></listcell>
+				<listcell label="${each.telefono}"></listcell>
+				<listcell label="${each.password}"></listcell>
+			</listitem>
+		</template>
+	</listbox>
+	<hbox style="margin-top:20px" id="detailBox" visible="false">
+		<vbox>
+			<hlayout>
+				<button id="deleteButton" label="Eliminar"
+					iconSclass="z-icon-trash-o" style="background: red;" />
+				<button id="editButton" label="Editar"
+					iconSclass="z-icon-pencil" />
+				<button id="saveButton" label="guardar" disabled="true"
+					iconSclass="z-icon-save" style="background: green;" />
+
+			</hlayout>
+			<hlayout>
+				Codigo :
+				<label id="codeLabel"
+					style="font-weight:bold" />
+
+			</hlayout>
+			<hlayout>
+				Documento :
+				<textbox id="documentInput" disabled="true"
+					style="font-weight:bold" />
+
+			</hlayout>
+			<hlayout>
+				Nombres :
+				<textbox id="nameInput" disabled="true"
+					style="font-weight:bold" />
+
+			</hlayout>
+			<hlayout>
+				Apellidos :
+				<textbox id="lastnameInput" disabled="true"
+					style="font-weight:bold" />
+			</hlayout>
+			<hlayout>
+				Correo :
+				<textbox id="correoInput" disabled="true"
+					style="font-weight:bold" />
+			</hlayout>
+			<hlayout>
+				Dirección :
+				<textbox id="directionInput" disabled="true"
+					style="font-weight:bold" />
+			</hlayout>
+			<hlayout>
+				Telefono :
+				<textbox id="phoneInput" disabled="true"
+					style="font-weight:bold" />
+			</hlayout>
+			<hlayout>
+				Contraseña :
+				<textbox id="passwordInput" disabled="true"
+					style="font-weight:bold" />
+			</hlayout>
+		</vbox>
+	</hbox>
+</window>
